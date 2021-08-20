@@ -30,8 +30,13 @@ export function Header() {
         <div className="profile-page sidebar-collapse">
             <nav className="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
                 <div className="container">
-                    <div className="navbar-translate"><a className="navbar-brand" href="#" rel="tooltip">{`${menu.brandName}`}</a>
-                        <button className="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" data-aria-controls="navigation" data-aria-expanded="false" data-aria-label="Toggle navigation"><span className="navbar-toggler-bar bar1"></span><span className="navbar-toggler-bar bar2"></span><span className="navbar-toggler-bar bar3"></span></button>
+                    <div className="navbar-translate">
+                        <a className="navbar-brand" href="#a" rel="tooltip">{`${menu.brandName}`}</a>
+                        <button className="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" data-aria-controls="navigation" data-aria-expanded="false" data-aria-label="Toggle navigation">
+                            <span className="navbar-toggler-bar bar1"></span>
+                            <span className="navbar-toggler-bar bar2"></span>
+                            <span className="navbar-toggler-bar bar3"></span>
+                        </button>
                     </div>
                     <div className="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul className="navbar-nav">

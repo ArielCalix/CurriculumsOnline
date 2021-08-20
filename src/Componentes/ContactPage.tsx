@@ -2,7 +2,7 @@ import React from 'react';
 
 export function ContactPage() {
     return <div className="section" id="contact">
-        <div className="cc-contact-information" style={{ backgroundImage: 'url(' + 'images/staticmap.png' + ')' }}>
+        <div className="cc-contact-information" style={{ backgroundImage: 'url(images/staticmap.png)' }}>
             <div className="container">
                 <div className="cc-contact">
                     <div className="row">

@@ -49,7 +49,8 @@ export function ReferencesPage() {
                                 const active = (nav === reference.id) ? 'active' : ''
                                 return <div className={`carousel-item ${active}`}>
                                     <div className="row">
-                                        <div className="col-lg-2 col-md-3 cc-reference-header"><img src={`${reference.photo}`} alt="Image" />
+                                        <div className="col-lg-2 col-md-3 cc-reference-header">
+                                            <img src={`${reference.photo}`} alt="Img" />
                                             <div className="h5 pt-2">{`${reference.name}`}</div>
                                             <p className="category">{`${reference.role}`}</p>
                                         </div>

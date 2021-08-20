@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IPortfolio, ITab, ITabPane, IRowPane, IColumn } from "../Interfaces/IPortfolio";
+import { IPortfolio, ITabPane, IRowPane, IColumn } from "../Interfaces/IPortfolio";
 
 const portfolio: IPortfolio = {
     title: 'Portafolio',
@@ -54,7 +54,9 @@ export function PortfolioPage() {
                             {
                                 portfolio.tabs.map((tab) => {
                                     const activo = (activePane === tab.id) ? 'active' : '';
-                                    return <li className="nav-item"><a className={`nav-link ${activo}`} data-toggle="tab" onClick={() => setActivePane(tab.id)} role="tablist"><i className={`fa fa-${tab.icon}`} data-aria-hidden="true"></i></a>
+                                    return <li className="nav-item">
+                                        <a className={`nav-link ${activo}`} href='#a' data-toggle="tab" onClick={() => setActivePane(tab.id)} role="tablist">
+                                            <i className={`fa fa-${tab.icon}`} data-aria-hidden="true"></i></a>
                                     </li>
                                 })
                             }
@@ -97,7 +99,7 @@ function TabRows(row: IRowPane) {
 function Columns(column: IColumn) {
     return <div className="cc-porfolio-image img-raised" data-data-aos="fade-up" data-data-aos-anchor-placement="top-bottom">
         <a href="#web-development">
-            <figure className="cc-effect"><img src={`${column.imagen}`} alt="Image" />
+            <figure className="cc-effect"><img src={`${column.imagen}`} alt="imgg" />
                 <figcaption>
                     <div className='h4'>{column.title}</div>
                     <p>{column.subTitle}</p>
