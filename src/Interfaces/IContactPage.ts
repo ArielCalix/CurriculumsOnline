@@ -1,4 +1,3 @@
-import { ErrorPayload } from "@formspree/react/dist/types/src/useForm";
 export interface IContactPage {
     title?: string;
     image?: string;
@@ -29,4 +28,10 @@ export interface ILabels {
 export interface IContactInfo {
     title: string;
     text: string;
+}
+
+export interface ErrorPayload {
+    field?: string;
+    code: string | null;
+    message: string;
 }
