@@ -27,7 +27,7 @@ export function EducationPage() {
             <div className="h4 text-center mb-4 title">{education.title}</div>
             {
                 education.education.map(educ => {
-                    return <div className="card">
+                    return <div key={educ.title} className="card">
                         <div className="row">
                             <div className="col-md-3 bg-primary" data-data-aos="fade-right" data-data-aos-offset="50" data-data-aos-duration="500">
                                 <div className="card-body cc-education-header">
@@ -39,7 +39,7 @@ export function EducationPage() {
                                 <div className="card-body">
                                     <div className="h5">{educ.titleName}</div>
                                     <p className="category">{educ.university}</p>
-                                    {educ.description.map(text => { return <p>{text}</p> })}
+                                    {educ.description.map((text, index) => { return <p key={index+'ep'}>{text}</p> })}
                                 </div>
                             </div>
                         </div>

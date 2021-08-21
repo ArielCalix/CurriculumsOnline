@@ -83,7 +83,7 @@ export function ContactPage() {
                                         <div className="card-body">
                                             {
                                                 formData.contactInfo?.map(info => {
-                                                    return <React.Fragment><p className="mb-0"><strong>{info.title}</strong></p>
+                                                    return <React.Fragment key={info.title}><p className="mb-0"><strong>{info.title}</strong></p>
                                                         <p className="pb-2">{info.text}</p>
                                                     </React.Fragment>
                                                 })
@@ -110,7 +110,7 @@ function ContactForm(formEl: IForm) {
             <div className="col">
                 {
                     formEl.formElements.map(el => {
-                        return <FormElement
+                        return <FormElement key={el.id}
                             id={el.id} type={el.type} name={el.name} label={el.label} placeHolder={el.placeHolder} errors={state.errors} icon={el.icon} />
                     })
                 }

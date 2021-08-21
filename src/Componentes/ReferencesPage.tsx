@@ -39,7 +39,7 @@ export function ReferencesPage() {
                         {
                             references.references.map((ref, index) => {
                                 const active = (nav === ref.id)
-                                return <li className={`${active}`} onClick={()=>setNav(ref.id)} data-slide-to={`${index}`}></li>
+                                return <li key={ref.id+'refers'} className={`${active}`} onClick={()=>setNav(ref.id)} data-slide-to={`${index}`}></li>
                             })
                         }
                     </ol>
@@ -47,7 +47,7 @@ export function ReferencesPage() {
                         {
                             references.references.map((reference, index) => {
                                 const active = (nav === reference.id) ? 'active' : ''
-                                return <div className={`carousel-item ${active}`}>
+                                return <div key={reference.id+'ref'} className={`carousel-item ${active}`}>
                                     <div className="row">
                                         <div className="col-lg-2 col-md-3 cc-reference-header">
                                             <img src={`${reference.photo}`} alt="Img" />
@@ -56,8 +56,8 @@ export function ReferencesPage() {
                                         </div>
                                         <div className="col-lg-10 col-md-9">
                                             {
-                                                reference.description.map(text => {
-                                                    return <p>{text}</p>
+                                                reference.description.map((text, index) => {
+                                                    return <p key={index+'refs'}>{text}</p>
                                                 })
                                             }
                                         </div>

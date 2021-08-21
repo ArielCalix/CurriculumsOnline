@@ -24,7 +24,7 @@ export function ExperiencePage() {
         <div className="container cc-experience">
             <div className="h4 text-center mb-4 title">{experience.title}</div>
             {experience.information.map(info => {
-                return <div className="card">
+                return <div key={info.place} className="card">
                     <div className="row">
                         <div className="col-md-3 bg-primary" data-data-aos="fade-right" data-data-aos-offset="50" data-data-aos-duration="500">
                             <div className="card-body cc-experience-header">
@@ -35,8 +35,8 @@ export function ExperiencePage() {
                         <div className="col-md-9" data-data-aos="fade-left" data-data-aos-offset="50" data-data-aos-duration="500">
                             <div className="card-body">
                                 <div className="h5">{info.role}</div>
-                                {info.description.map(text => {
-                                   return <p>{text}</p>
+                                {info.description.map((text,index) => {
+                                   return <p key={index+'ep2'} >{text}</p>
                                 })
                                 }
                             </div>

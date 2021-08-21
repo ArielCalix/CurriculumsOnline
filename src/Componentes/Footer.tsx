@@ -6,7 +6,7 @@ export function Footer(props: IPersonalInformation) {
         <div className="container text-center">
             {
                 props.socialMedia.map(social => {
-                    return <a className="cc-facebook btn btn-link" href={`${social.link}`}>
+                    return <a key={social.socialName+'foo'} className="cc-facebook btn btn-link" href={`${social.link}`}>
                         <i className={`fa fa-${social.icon} fa-2x`} data-aria-hidden="true"></i>
                     </a>
                 })

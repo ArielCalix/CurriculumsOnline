@@ -4,7 +4,7 @@ import { ISkill, ISkillsPage } from "../Interfaces/ISkills";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const skillsPage: ISkillsPage = {
-    title: '',
+    title: 'Habilidades',
     skills: [
     {
         skillName: 'CSS',
@@ -68,7 +68,7 @@ function Column(props: ISkill) {
     return <div className="col-md-6">
         <div className="progress-container progress-primary"><span className="progress-badge">{props.skillName}</span>
             <div className="progress">
-                <ProgressBar animated striped now={props.skillPercentage} />
+                <ProgressBar bsPrefix='progress-bar' now={props.skillPercentage} />
                 <span className="progress-value">{`${props.skillPercentage}%`}</span>
             </div>
         </div>

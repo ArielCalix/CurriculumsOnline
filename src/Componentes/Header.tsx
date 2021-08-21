@@ -1,33 +1,32 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { Link } from "react-scroll";
 
 const menu = {
     brandName: 'Ariel Calix Space',
     pages: [
         {
             text: 'About',
-            url: 'about'
+            url: '#about'
         },
         {
             text: 'Skills',
-            url: 'skills'
+            url: '#skills'
         },
         {
             text: 'Portfolio',
-            url: 'portfolio'
+            url: '#portfolio'
         },
         {
             text: 'Experience',
-            url: 'experience'
+            url: '#experience'
         },
         {
             text: 'References',
-            url: 'reference'
+            url: '#reference'
         },
         {
             text: 'Contact',
-            url: 'contact'
+            url: '#contact'
         },
     ]
 }
@@ -67,9 +66,8 @@ export function Header() {
                         <ul className="navbar-nav">
                             {
                                 menu.pages.map(item => {
-                                    return <li className="nav-item">
-                                        <Link activeClass='nav-link smooth-scroll active' to={`${item.url}`} spy={true} smooth={'easeInOutQuad'} offset={-50} duration={500}>{item.text}</Link>
-                                        {/* <a className="nav-link smooth-scroll" href={`${item.url}`}>{item.text}</a> */}
+                                    return <li key={item.text} className="nav-item">
+                                        <a  className="nav-link smooth-scroll" href={`${item.url}`}>{item.text}</a>
                                     </li>
                                 })
                             }

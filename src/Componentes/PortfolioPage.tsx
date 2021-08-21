@@ -54,7 +54,7 @@ export function PortfolioPage() {
                             {
                                 portfolio.tabs.map((tab) => {
                                     const activo = (activePane === tab.id) ? 'active' : '';
-                                    return <li className="nav-item">
+                                    return <li key={tab.id+'pt'} className="nav-item">
                                         <a className={`nav-link ${activo}`} href='#a' data-toggle="tab" onClick={() => setActivePane(tab.id)} role="tablist">
                                             <i className={`fa fa-${tab.icon}`} data-aria-hidden="true"></i></a>
                                     </li>
@@ -68,7 +68,7 @@ export function PortfolioPage() {
                 {
                     portfolio.tabPanes.map((tabPane, index) => {
                         const active = (activePane === (index + 1)) ? 'active' : '';
-                        return <TabPanes active={active} row={tabPane.row} />
+                        return <TabPanes key={index+'tp'} active={active} row={tabPane.row} />
                     })
                 }
             </div>
@@ -79,7 +79,7 @@ export function PortfolioPage() {
 function TabPanes(tabPane: ITabPane) {
     return <div className={`tab-pane ${tabPane.active}`} id="web-development">
         <div className="ml-auto mr-auto">
-            <TabRows columns={tabPane.row.columns} />
+            <TabRows key={tabPane.active+'ttp'} columns={tabPane.row.columns} />
         </div>
     </div>
 }
@@ -88,8 +88,8 @@ function TabRows(row: IRowPane) {
     return <div className="row">
         {
             row.columns.map(column => {
-                return <div className="col-md-6">
-                    <Columns imagen={column.imagen} title={column.title} subTitle={column.subTitle} />
+                return <div key={column.title} className="col-md-6">
+                    <Columns  imagen={column.imagen} title={column.title} subTitle={column.subTitle} />
                 </div>
             })
         }

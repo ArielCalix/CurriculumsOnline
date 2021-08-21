@@ -11,7 +11,7 @@ const aboutInfo: IAboutPage = {
         ],
         link: {
             url: 'https://templateflip.com/templates/creative-cv/',
-            text: 'Learn More'
+            text: 'Ver más'
         }
     },
     basicInformation: {
@@ -45,8 +45,8 @@ export function AboutPage() {
                         <div className="card-body">
                             <div className="h4 mt-0 title">{aboutInfo.resume.title}</div>
                             {
-                                aboutInfo.resume.description.map(string => {
-                                    return <p>{string}</p>
+                                aboutInfo.resume.description.map((string, index) => {
+                                    return <p key={index}>{string}</p>
                                 })
                             }
                             <a href={aboutInfo.resume.link.url}>{aboutInfo.resume.link.text}</a>
@@ -57,7 +57,7 @@ export function AboutPage() {
                             <div className="h4 mt-0 title">{aboutInfo.basicInformation.title}</div>
                             {
                                 aboutInfo.basicInformation.items.map(item => {
-                                    return <div className="row">
+                                    return <div key={item.title} className="row">
                                         <div className="col-sm-4"><strong className="text-uppercase">{item.title}</strong></div>
                                         <div className="col-sm-8">{item.content}</div>
                                     </div>
