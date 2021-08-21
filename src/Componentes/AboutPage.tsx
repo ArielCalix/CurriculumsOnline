@@ -1,12 +1,13 @@
 import React from 'react';
+import { IAboutPage } from "../Interfaces/IAboutPage";
 
-const aboutInfo = {
+const aboutInfo: IAboutPage = {
     resume: {
         title: 'Acerca de',
-        strings: [
-            'Hello! I am Anthony Barnett.Web Developer, Graphic Designer and Photographer.',
-            'Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skills and experience.',
-            'Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio.'
+        description: [
+            'Hola! Soy Ariel Cálix. Desarrollador Web, Diseñador de Interfaces Amigables y Analista de Datos.',
+            'Soy una persona que le gusta la tecnológia y el desarrollo de software.',
+            'Me especializo en el análisis de datos, en desarrollo de software y diseño de interfaces.'
         ],
         link: {
             url: 'https://templateflip.com/templates/creative-cv/',
@@ -17,18 +18,18 @@ const aboutInfo = {
         title: 'Informacion básica',
         items: [
             {
-                title: 'email',
+                title: 'Correo',
                 content: 'acalixvasquez@gmail.com',
             },
             {
-                title: 'phone',
+                title: 'Teléfono',
                 content: '(504) 9767-0648',
             },
             {
-                title: 'address',
+                title: 'Direción',
                 content: 'Col. Nueva Esperanza 25mts',
             }, {
-                title: 'Age',
+                title: 'Edad',
                 content: '29'
             }
         ]
@@ -44,7 +45,7 @@ export function AboutPage() {
                         <div className="card-body">
                             <div className="h4 mt-0 title">{aboutInfo.resume.title}</div>
                             {
-                                aboutInfo.resume.strings.map(string => {
+                                aboutInfo.resume.description.map(string => {
                                     return <p>{string}</p>
                                 })
                             }

@@ -1,49 +1,51 @@
 import React from 'react';
 import { ProgressBar } from "react-bootstrap";
-import { ISkills, ISkill } from "../Interfaces/ISkills";
+import { ISkill, ISkillsPage } from "../Interfaces/ISkills";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-const skills: ISkill[] = [
+const skillsPage: ISkillsPage = {
+    title: '',
+    skills: [
     {
         skillName: 'CSS',
         skillPercentage: 75,
     },
     {
         skillName: 'HTML',
-        skillPercentage: 60,
+        skillPercentage: 90,
     },
     {
         skillName: 'JavaScript',
-        skillPercentage: 60,
+        skillPercentage: 90,
     },
     {
         skillName: 'SASS',
-        skillPercentage: 60,
+        skillPercentage: 75,
     },
     {
         skillName: 'Bootstrap',
-        skillPercentage: 75,
+        skillPercentage: 90,
     },
     {
         skillName: 'Photoshop',
         skillPercentage: 70,
     },
-]
+]}
 
 export function SkillPage() {
-    const rows = skills.length / 2;
+    const rows = skillsPage.skills.length / 2;
     const Rows = [];
     let start = 0
     let finish = 2
     for (let index = 0; index < rows; index++) {
-        const SkillsArray = skills.slice(start, finish);
+        const SkillsArray = skillsPage.skills.slice(start, finish);
         start += 2;
         finish += 2;
-        Rows.push(<Row key={index} skills={SkillsArray} />);
+        Rows.push(<RowSkills key={index} skills={SkillsArray} />);
     }
     return <div className="section" id="skills">
         <div className="container">
-            <div className="h4 text-center mb-4 title">Professional Skills</div>
+            <div className="h4 text-center mb-4 title">{skillsPage.title}</div>
             <div className="card" data-data-aos="fade-up" data-data-aos-anchor-placement="top-bottom">
                 <div className="card-body">
                     {Rows}
@@ -53,8 +55,8 @@ export function SkillPage() {
     </div>
 }
 
-function Row(Skills: ISkills) {
-    const cols = Skills.skills.map((skill, index) => {
+function RowSkills(props: ISkillsPage) {
+    const cols = props.skills.map((skill, index) => {
         return <Column key={index} skillName={skill.skillName} skillPercentage={skill.skillPercentage} />
     })
     return <div className="row">
@@ -62,12 +64,12 @@ function Row(Skills: ISkills) {
     </div>
 }
 
-function Column(Skill: ISkill) {
+function Column(props: ISkill) {
     return <div className="col-md-6">
-        <div className="progress-container progress-primary"><span className="progress-badge">{Skill.skillName}</span>
+        <div className="progress-container progress-primary"><span className="progress-badge">{props.skillName}</span>
             <div className="progress">
-                <ProgressBar animated striped now={Skill.skillPercentage} />
-                <span className="progress-value">{`${Skill.skillPercentage}%`}</span>
+                <ProgressBar animated striped now={props.skillPercentage} />
+                <span className="progress-value">{`${props.skillPercentage}%`}</span>
             </div>
         </div>
     </div>

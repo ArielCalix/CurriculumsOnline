@@ -11,13 +11,50 @@ import { EducationPage } from './Componentes/EducationPage';
 import { ReferencesPage } from './Componentes/ReferencesPage';
 import { ContactPage } from './Componentes/ContactPage';
 import { Footer } from "./Componentes/Footer";
+import { IPersonalInformation } from './Interfaces/IPersonalInformation';
+
+const personalInformation: IPersonalInformation = {
+  nombre: 'Ariel Antonio Calix Vasquez',
+  capabillities: 'Desarrollador Web, Desarrollador de Apps, UX',
+  buttonHire: 'Contratame',
+  buttonCv: 'Descargar',
+  photo: 'images/ArielCalix.jpg',
+  socialMedia: [
+    {
+      socialName: 'Twitter',
+      icon: 'twitter',
+      link: 'https://www.google.com'
+    },
+    {
+      socialName: 'Instagram',
+      icon: 'instagram',
+      link: 'https://www.google.com'
+    },
+    {
+      socialName: 'LinkedIn',
+      icon: 'linkedin',
+      link: 'https://www.google.com'
+    },
+    {
+      socialName: 'GitHub',
+      icon: 'github',
+      link: 'https://www.google.com'
+    },
+  ]
+}
 
 function App() {
   return (
     <React.Fragment>
       <Header />
       <div className="page-content">
-        <ProfilePage />
+        <ProfilePage
+          nombre={personalInformation.nombre}
+          capabillities={personalInformation.capabillities}
+          buttonHire={personalInformation.buttonHire}
+          buttonCv={personalInformation.buttonCv}
+          photo={personalInformation.photo}
+          socialMedia={personalInformation.socialMedia} />
         <AboutPage />
         <SkillPage />
         <PortfolioPage />
@@ -26,7 +63,7 @@ function App() {
         <ReferencesPage />
         <ContactPage />
       </div>
-      <Footer />
+      <Footer nombre={personalInformation.nombre} socialMedia={personalInformation.socialMedia} />
     </React.Fragment >
   );
 }

@@ -2,28 +2,21 @@ import React from 'react';
 import { IEducations } from "../Interfaces/IEducations";
 
 const education: IEducations = {
-    title: 'Education',
+    title: 'Estudios Realizados',
     education: [
         {
-            years: '2013 - 2015',
-            title: 'Master`s Degree',
-            titleName: 'Master of Information Technology',
-            university: 'University of Computer Science',
-            description: ['Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.']
+            years: '2015 - 2018',
+            title: 'Ingenieria en Ciencias Computacionales',
+            titleName: 'Ingeniero en Ciencias de la Computación',
+            university: 'Universidad Católica de Honduras',
+            description: ['Título obtenido de Ingeniería en Ciencias de la Computación en la Universidad Católica de Honduras en el año 2018.']
         },
         {
-            years: '2009 - 2013',
-            title: 'Bachelor`s Degree',
-            titleName: 'Bachelor of Computer Science',
-            university: 'University of Computer Science',
-            description: ['Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.']
-        },
-        {
-            years: '2007 - 2009',
-            title: 'High School',
-            titleName: 'Science and Mathematics',
-            university: 'School of Secondary board',
-            description: ['Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.']
+            years: '2020 - 2021',
+            title: 'Analisis de Datos',
+            titleName: 'Analista de Datos',
+            university: 'New Horizons Honduras',
+            description: ['Analisis de datos utilizando power bi, creación de ETL y sets de Datos.']
         },
     ]
 }

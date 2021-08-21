@@ -1,19 +1,18 @@
 import React from "react";
+import { IPersonalInformation } from "../Interfaces/IPersonalInformation";
 
-export function Footer() {
+export function Footer(props: IPersonalInformation) {
     return <footer className="footer">
         <div className="container text-center">
-            <a className="cc-facebook btn btn-link" href="#aa">
-                <i className="fa fa-facebook fa-2x" data-aria-hidden="true"></i>
-            </a>
-            <a className="cc-twitter btn btn-link " href="#a">
-                <i className="fa fa-twitter fa-2x" data-aria-hidden="true"></i>
-            </a>
-            <a className="cc-instagram btn btn-link" href="#a">
-                <i className="fa fa-instagram fa-2x" data-aria-hidden="true"></i>
-            </a>
+            {
+                props.socialMedia.map(social => {
+                    return <a className="cc-facebook btn btn-link" href={`${social.link}`}>
+                        <i className={`fa fa-${social.icon} fa-2x`} data-aria-hidden="true"></i>
+                    </a>
+                })
+            }
         </div>
-        <div className="h4 title text-center">Anthony Barnett</div>
+        <div className="h4 title text-center">{props.nombre}</div>
         <div className="text-center text-muted">
             <p>&copy; Creative CV. All rights reserved.<br />Design -
                 <a className="credit" href="https://templateflip.com">TemplateFlip</a>

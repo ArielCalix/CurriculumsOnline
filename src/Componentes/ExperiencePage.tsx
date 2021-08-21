@@ -2,25 +2,19 @@ import React from 'react';
 import { IExperience } from "../Interfaces/IExperience";
 
 const experience: IExperience = {
-    title: '',
+    title: 'Experiencia',
     information: [
         {
-            date: 'March 2016 - Present',
-            place: 'CreativeM',
-            role: 'Front End Developer',
-            description: ['Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.']
+            date: 'Septiembre 2019 - Julio 2021',
+            place: 'Banco Central de Honduras',
+            role: 'Técnico Informático',
+            description: ['Encargado de desarrollos de los elementos Web de la página principal del Banco Central de Honduras, Trabajo con reportes de cada uno de los departamentos, mantenimiento de servidores e innovaciones relacionadas a la exposición de datos.']
         },
         {
-            date: 'April 2014 - March 2016',
-            place: 'WebNote',
-            role: 'Web Developer',
-            description: ['Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.']
-        },
-        {
-            date: 'April 2013 - February 2014',
-            place: 'WEBM',
-            role: 'Intern',
-            description: ['Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet at, eu etiam pretium molestie ultricies sollicitudin dui.']
+            date: 'Julio 2021 - Actualidad',
+            place: 'ITS - Banco Davivienda',
+            role: 'Analista Programador',
+            description: ['Encargado de desarrollo de Micro Servicios, mantenimiento a código y mejora.']
         }
     ]
 }
@@ -28,7 +22,7 @@ const experience: IExperience = {
 export function ExperiencePage() {
     return <div className="section" id="experience">
         <div className="container cc-experience">
-            <div className="h4 text-center mb-4 title">Work Experience</div>
+            <div className="h4 text-center mb-4 title">{experience.title}</div>
             {experience.information.map(info => {
                 return <div className="card">
                     <div className="row">

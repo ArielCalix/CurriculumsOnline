@@ -1,4 +1,5 @@
-export interface ISkills {
+export interface ISkillsPage {
+    title?: string;
     skills: ISkill[];
 }
 
