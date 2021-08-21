@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { Link, Events, scrollSpy } from "react-scroll";
+import { Link } from "react-scroll";
 
 const menu = {
     brandName: 'Ariel Calix Space',
