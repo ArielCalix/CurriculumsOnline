@@ -1,34 +1,59 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import { Link, Events, scrollSpy } from "react-scroll";
 
 const menu = {
     brandName: 'Ariel Calix Space',
     pages: [
         {
             text: 'About',
-            url: '#about'
+            url: 'about'
         },
         {
             text: 'Skills',
-            url: '#skills'
+            url: 'skills'
         },
         {
             text: 'Portfolio',
-            url: '#portfolio'
+            url: 'portfolio'
         },
         {
             text: 'Experience',
-            url: '#experience'
+            url: 'experience'
+        },
+        {
+            text: 'References',
+            url: 'reference'
         },
         {
             text: 'Contact',
-            url: '#contact'
-        }]
+            url: 'contact'
+        },
+    ]
 }
 
+
 export function Header() {
+    const [spy, setSpy] = useState('navbar-transparent')
+    useEffect(() => {
+        const listenScroll = () => {
+            const winScroll =
+                document.body.scrollTop || document.documentElement.scrollTop
+            const height =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight
+            const scrolled = winScroll / height
+            if (scrolled > 0.12) {
+                setSpy('')
+            } else {
+                setSpy('navbar-transparent')
+            }
+        }
+        window.addEventListener('scroll', listenScroll)
+    })
     return <header>
         <div className="profile-page sidebar-collapse">
-            <nav className="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+            <nav className={`navbar navbar-expand-lg fixed-top ${spy} bg-primary`} data-color-on-scroll="400">
                 <div className="container">
                     <div className="navbar-translate">
                         <a className="navbar-brand" href="#a" rel="tooltip">{`${menu.brandName}`}</a>
@@ -43,7 +68,8 @@ export function Header() {
                             {
                                 menu.pages.map(item => {
                                     return <li className="nav-item">
-                                        <a className="nav-link smooth-scroll" href={`${item.url}`}>{item.text}</a>
+                                        <Link activeClass='nav-link smooth-scroll active' to={`${item.url}`} spy={true} smooth={'easeInOutQuad'} offset={-50} duration={500}>{item.text}</Link>
+                                        {/* <a className="nav-link smooth-scroll" href={`${item.url}`}>{item.text}</a> */}
                                     </li>
                                 })
                             }
