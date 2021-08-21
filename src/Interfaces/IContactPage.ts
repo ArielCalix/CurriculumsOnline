@@ -7,6 +7,7 @@ export interface IContactPage {
 
 export interface IForm{
     title: string;
+    buttonName: string;
     formElements: IFormElement[];
 }
 

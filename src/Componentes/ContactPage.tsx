@@ -11,6 +11,7 @@ const formData: IContactPage = {
     ],
     formInfo: {
         title: 'Pongamonos en contacto para un café',
+        buttonName: 'Enviar',
         formElements: [
             {
                 id: 'name',
@@ -73,6 +74,7 @@ export function ContactPage() {
                                             {
                                                 <ContactForm
                                                     title={formData.formInfo.title}
+                                                    buttonName={formData.formInfo.buttonName}
                                                     formElements={formData.formInfo.formElements} />
                                             }
                                         </div>
@@ -114,7 +116,7 @@ function ContactForm(formEl: IForm) {
                 }
                 <div className="row">
                     <div className="col">
-                        <button className="btn btn-primary" type="submit" disabled={state.submitting}>Send</button>
+                        <button className="btn btn-primary" type="submit" disabled={state.submitting}>{formEl.buttonName}</button>
                     </div>
                 </div>
             </div>
