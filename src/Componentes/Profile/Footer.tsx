@@ -1,5 +1,5 @@
 import React from "react";
-import { IPersonalInformation } from "../Interfaces/IPersonalInformation";
+import { IPersonalInformation } from "../../Interfaces/IPersonalInformation";
 
 export function Footer(props: IPersonalInformation) {
     return <footer className="footer">

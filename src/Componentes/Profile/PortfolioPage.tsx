@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IPortfolio, ITabPane, IRowPane, IColumn } from "../Interfaces/IPortfolio";
+import { IPortfolio, ITabPane, IRowPane, IColumn } from "../../Interfaces/IPortfolio";
 
 const portfolio: IPortfolio = {
     title: 'Portafolio',

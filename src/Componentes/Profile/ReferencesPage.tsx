@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IReferencesPage } from "../Interfaces/IReferencesPage";
+import { IReferencesPage } from "../../Interfaces/IReferencesPage";
 
 const references: IReferencesPage = {
     title: 'References',

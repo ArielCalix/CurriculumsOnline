@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPersonalInformation } from "../Interfaces/IPersonalInformation";
+import { IPersonalInformation } from "../../Interfaces/IPersonalInformation";
 
 export function ProfilePage(props: IPersonalInformation) {
     return <div className="profile-page">

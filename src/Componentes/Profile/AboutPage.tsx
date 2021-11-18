@@ -1,5 +1,5 @@
 import React from 'react';
-import { IAboutPage } from "../Interfaces/IAboutPage";
+import { IAboutPage } from "../../Interfaces/IAboutPage";
 
 const aboutInfo: IAboutPage = {
     resume: {

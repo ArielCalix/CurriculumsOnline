@@ -1,5 +1,5 @@
 import React from 'react';
-import { IEducations } from "../Interfaces/IEducations";
+import { IEducations } from "../../Interfaces/IEducations";
 
 const education: IEducations = {
     title: 'Estudios Realizados',
