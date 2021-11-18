@@ -1,5 +1,5 @@
 import React from 'react';
-import { IExperience } from "../../Interfaces/IExperience";
+import { IExperience } from "../../Interfaces/Perfil/IExperience";
 
 const experience: IExperience = {
     title: 'Experiencia',

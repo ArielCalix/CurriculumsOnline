@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProgressBar } from "react-bootstrap";
-import { ISkill, ISkillsPage } from "../../Interfaces/ISkills";
+import { ISkill, ISkillsPage } from "../../Interfaces/Perfil/ISkills";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const skillsPage: ISkillsPage = {

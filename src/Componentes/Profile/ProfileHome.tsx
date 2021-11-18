@@ -9,7 +9,7 @@ import { EducationPage } from './EducationPage';
 import { ReferencesPage } from './ReferencesPage';
 import { ContactPage } from './ContactPage';
 import { Footer } from "./Footer";
-import { IPersonalInformation } from '../../Interfaces/IPersonalInformation';
+import { IPersonalInformation } from '../../Interfaces/Perfil/IPersonalInformation';
 
 const personalInformation: IPersonalInformation = {
     nombre: 'Ariel Antonio Calix Vasquez',

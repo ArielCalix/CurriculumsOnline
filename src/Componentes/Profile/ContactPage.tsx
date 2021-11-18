@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { IContactPage, IForm, IFormElement } from "../../Interfaces/IContactPage";
+import { IContactPage, IForm, IFormElement } from "../../Interfaces/Perfil/IContactPage";
 const formData: IContactPage = {
     title: 'Contactame',
     image: 'images/staticmap.png',
