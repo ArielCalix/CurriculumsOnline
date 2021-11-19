@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Header } from './Header';
+// import { Header } from './Header';
 import { ProfilePage } from './ProfilePage';
 import { AboutPage } from './AboutPage';
 import { SkillPage } from './SkillPage';
@@ -43,7 +43,7 @@ const personalInformation: IPersonalInformation = {
 
 export default function HomeProfile() {
     return <Fragment>
-        <Header/>
+        {/* <Header/> */}
         <div className="page-content">
             <ProfilePage
                 nombre={personalInformation.nombre}
