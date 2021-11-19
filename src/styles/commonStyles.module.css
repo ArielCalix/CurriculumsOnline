@@ -1,0 +1,82 @@
+@import "../palette.css";
+
+.colorPrimary {
+  background-color: var(--color-primary);
+  color: black;
+}
+.colorPrimary:hover {
+  background-color: var(--color-primary-transparent);
+  color: var(--color-primary);
+}
+.colorInfo {
+  background-color: var(--color-info);
+  color: white;
+}
+.colorInfo:hover {
+  background-color: var(--color-info-transparent);
+  color: white;
+}
+.colorSuccess {
+  background-color: var(--color-success);
+  color: white;
+}
+.colorSuccess:hover {
+  background-color: var(--color-success-transparent);
+  color: var(--color-success);
+}
+.colorWarning {
+  background-color: var(--color-warning);
+  color: white;
+}
+.colorWarning:hover {
+  background-color: var(--color-warning-transparent);
+  color: var(--color-warning);
+}
+.colorDanger {
+  background-color: var(--color-danger);
+  color: white;
+}
+.colorDanger:hover {
+  background-color: var(--color-danger);
+  color: whit-transparente;
+}
+.colorLightShade {
+  background-color: var(--color-light-shade);
+  color: var(--color-dark-shades);
+}
+.colorLightShade:hover {
+  background-color: var(--color-dark-shades-transparent);
+  color: var(--color-light-shade);
+}
+.colorLightAccent {
+  background-color: var(--color-light-accent);
+  color: black;
+}
+.colorLightAccent:hover {
+  background-color: var(--color-light-accent-transparent);
+  color: var(--color-light-accent);
+}
+.colorMainBrand {
+  background-color: var(--color-main-brand);
+  color: black;
+}
+.colorMainBrand:hover {
+  background-color: var(--color-main-brand-transparent);
+  color: var(--color-main-brand);
+}
+.colorDarkAccent {
+  background-color: var(--color-dark-accent);
+  color: white;
+}
+.colorDarkAccent:hover {
+  background-color: var(--color-dark-accent-transparent);
+  color: var(--color-dark-accent);
+}
+.colorDarkShade {
+  background-color: var(--color-dark-shades);
+  color: white;
+}
+.colorDarkShade:hover {
+  background-color: var(--color-dark-shades-transparent);
+  color: var(--color-dark-shades);
+}

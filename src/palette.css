@@ -1,0 +1,24 @@
+:root {
+  /* Main color palette */
+  --color-light-shade: #f2f2f2;
+  --color-light-accent: #5166a6;
+  --color-main-brand: #a6988d;
+  --color-dark-accent: #404040;
+  --color-dark-shades: #1d2659;
+  --color-light-shade-transparent: rgba(242, 242, 242, 0.75);
+  --color-light-accent-transparent: rgba(81, 102, 164, 0.75);
+  --color-main-brand-transparent: rgba(165, 151, 141, 0.75);
+  --color-dark-accent-transparent: rgba(64, 64, 64, 0.75);
+  --color-dark-shades-transparent: rgba(29, 38, 89, 0.75);
+  /* Color semantics */
+  --color-primary: var(--color-main-brand);
+  --color-info: var(--color-dark-shades);
+  --color-success: #67a862;
+  --color-warning: #e4982a;
+  --color-danger: #f44336;
+  --color-primary-transparent: var(--color-main-brand-transparent);
+  --color-info-transparent: var(--color-dark-shades-transparent);
+  --color-success-transparent: rgba(103, 168, 98, 0.75);
+  --color-warning-transparent: rgba(228, 152, 42, 0.75);
+  --color-danger-transparent: rgba(244, 67, 54, 0.75);
+}

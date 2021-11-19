@@ -1,0 +1,8 @@
+@import "../palette.css";
+
+.navBar {
+  background-color: var(--color-main-brand);
+}
+.navBar > a.navbar-brand {
+  background-color: aqua;
+}
